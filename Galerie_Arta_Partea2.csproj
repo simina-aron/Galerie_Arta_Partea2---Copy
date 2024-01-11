@@ -59,6 +59,10 @@
 	  <None Remove="Resources\Images\brush.jpg" />
 	  <None Remove="Resources\Images\brushes.png" />
 	  <None Remove="Resources\Images\logo.jpeg" />
+	  <None Remove="Resources\Images\tablou1.jpg" />
+	  <None Remove="Resources\Images\tablou2.jpg" />
+	  <None Remove="Resources\Images\tablou3.jpg" />
+	  <None Remove="Resources\Images\tablou4.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -69,7 +73,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="DesprePage.xaml">
+	  <Compile Update="Despre.xaml.cs">
+	    <DependentUpon>Despre.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Tablouri.xaml.cs">
+	    <DependentUpon>Tablouri.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Compoziție și îngrijire.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Despre.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Tablouri.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Galerie_Arta_Partea2.Compoziție_și_îngrijire"
+             Title="Compoziție_și_îngrijire">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Margin="10">
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="brush.jpg"
+                SemanticProperties.Description="Detalii despre compoziția și îngrijirea tablourilor disponibile"
+                HeightRequest="64" />
+                <Label FontSize="22" FontAttributes="Bold" Text="Detalii despre compoziția și îngrijirea tablourilor disponibile" VerticalOptions="End" />
+                <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
+            </HorizontalStackLayout>
+            <StackLayout Spacing="20">
+                <FlexLayout Wrap="Wrap" AlignItems="Start">
+                    <!-- Detalii pentru material -->
+                    <Frame BorderColor="Black" CornerRadius="5" Padding="10" HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Material Compozitie:" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Panza: Materialul din pânză necesită o îngrijire delicată pentru a evita deteriorarea fibrelor. Poate fi curățată cu o perie moale pentru a îndepărta praful și trebuie protejată de expunerea directă la soare și umiditate excesivă." FontSize="16" />
+                            <Label Text="Lemn: Tablourile pe suport de lemn necesită o atenție deosebită la umiditate și temperatură. Este recomandat să se evite expunerea directă la lumina soarelui și să se mențină o umiditate relativ constantă." FontSize="16" />
+                            <Label Text="Hartie: Tablourile realizate pe hârtie necesită protecție împotriva umidității și expunerii la lumină directă. Evitați manipularea frecventă și depozitați-le într-un loc uscat și întunecat." FontSize="16" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Detalii pentru tip_inscriptionare -->
+                    <Frame BorderColor="Black" CornerRadius="5" Padding="10" HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Tip Inscriptionare:" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Ulei: Picturile în ulei necesită o îngrijire delicată. Evitați expunerea la umiditate și lumina directă a soarelui. Se recomandă curățarea periodică cu o perie moale și evitarea atingerii directe." FontSize="16" />
+                            <Label Text="Acrilic: Tablourile acrilice sunt mai rezistente la umiditate decât cele în ulei, dar trebuie, totuși, protejate de expunerea la lumină excesivă și umiditate." FontSize="16" />
+                            <Label Text="Creion: Desenele sau tablourile realizate cu creion necesită o manipulare atentă pentru a evita ștergerea accidentală. Pot fi protejate prin încadrare și depozitare în condiții corespunzătoare." FontSize="16" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Detalii pentru ingrijire_recomandata -->
+                    <Frame BorderColor="Black" CornerRadius="5" Padding="10" HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Ingrijire Recomandata:" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Îngrijirea recomandată depinde de specificul fiecărui tablou, dar în general, este important să se evite manipularea frecventă, expunerea la medii extreme și lumina directă a soarelui. Curățarea periodică cu instrumente non-abrazive poate fi benefică." FontSize="16" />
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Detalii pentru stare_conservare -->
+                    <Frame BorderColor="Black" CornerRadius="5" Padding="10" HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Stare Conservare:" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="În stare bună: Picturile în stare bună necesită o îngrijire preventivă. Păstrați-le într-un mediu controlat, evitând schimbările bruște de temperatură și umiditate." FontSize="16" />
+                            <Label Text="Restaurat: Tablourile restaurate pot necesita o îngrijire specială. Respectați recomandările conservatorului și evitați manipularea excesivă." FontSize="16" />
+                            <Label Text="Necesită restaurare: Tablourile care necesită restaurare trebuie să fie tratate cu grijă. Consultați un conservator de artă pentru a evalua și îngriji corespunzător tabloul înainte de orice intervenție." FontSize="16" />
+                        </StackLayout>
+                    </Frame>
+                </FlexLayout>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
