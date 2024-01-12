@@ -7,15 +7,26 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Galerie_Arta_Partea2">
 
-    <TabBar>        <ShellContent
-            Title="Acasă"              ContentTemplate="{DataTemplate local:MainPage}"
+    <TabBar>
+        <ShellContent
+            Title="Acasă"  
+            ContentTemplate="{DataTemplate local:MainPage}"
          />
-        <ShellContent              Title="Despre"
-            ContentTemplate="{DataTemplate local:Despre}"          />
-        <ShellContent            Title="Tablouri"
-            ContentTemplate="{DataTemplate local:Tablouri}"         />
-        <ShellContent            Title="Compoziție și îngrijire"
-            ContentTemplate="{DataTemplate local:Compoziție_și_îngrijire}"         /> 
+        <ShellContent  
+            Title="Despre"
+            ContentTemplate="{DataTemplate local:Despre}" 
+         />
+        <ShellContent
+            Title="Tablouri"
+            ContentTemplate="{DataTemplate local:Tablouri}"
+         />
+        <ShellContent
+            Title="Compoziție și îngrijire"
+            ContentTemplate="{DataTemplate local:Compoziție_și_îngrijire}"
+         />
+        <ShellContent
+            Title="Programările mele"            ContentTemplate="{DataTemplate local:ProgramareEntryPage}"
+         />  
     </TabBar>
 
 </Shell>

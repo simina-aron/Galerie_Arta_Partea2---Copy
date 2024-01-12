@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Galerie_Arta_Partea2.ProgramareEntryPage"
+             Title="ProgramareEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adaugă programare vizualizare" Clicked="OnProgramare_vizualizareAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="programareView" Margin="20" ItemSelected="OnProgramareViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Descriere}" Detail="{Binding Date}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
