@@ -15,6 +15,8 @@ namespace Galerie_Arta_Partea2.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Programare_vizualizare>().Wait();
+            _database.CreateTableAsync<Tablou>().Wait();
+            _database.CreateTableAsync<Listă_tablouri>().Wait();
         }
         public Task<List<Programare_vizualizare>> GetProgramare_vizualizareAsync()
         {
@@ -41,5 +43,46 @@ namespace Galerie_Arta_Partea2.Data
         {
             return _database.DeleteAsync(pvizualizare);
         }
+
+        public Task<int> SaveTablouAsync(Tablou tablou)
+        {
+            if (tablou.ID != 0)
+            {
+                return _database.UpdateAsync(tablou);
+            }
+            else
+            {
+                return _database.InsertAsync(tablou);
+            }
+        }
+        public Task<int> DeleteTablouAsync(Tablou tablou)
+        {
+            return _database.DeleteAsync(tablou);
+        }
+        public Task<List<Tablou>> GetTablouAsync()
+        {
+            return _database.Table<Tablou>().ToListAsync();
+        }
+
+        public Task<int> SaveListă_tablouriAsync(Listă_tablouri listt)
+        {
+            if (listt.ID != 0)
+            {
+                return _database.UpdateAsync(listt);
+            }
+            else
+            {
+                return _database.InsertAsync(listt);
+            }
+        }
+        public Task<List<Tablou>> GetListă_tablouriAsync(int programare_vizualizareid)
+        {
+            return _database.QueryAsync<Tablou>(
+            "select T.ID, T.Description from Tablou T"
+            + " inner join Listă_Tablouri LT"
+            + " on T.ID = LT.TablouID where LT.Programare_vizualizareID = ?",
+            programare_vizualizareid);
+        }
     }
 }
+

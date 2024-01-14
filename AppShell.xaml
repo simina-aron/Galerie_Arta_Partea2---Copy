@@ -25,7 +25,8 @@
             ContentTemplate="{DataTemplate local:Compoziție_și_îngrijire}"
          />
         <ShellContent
-            Title="Programările mele"            ContentTemplate="{DataTemplate local:ProgramareEntryPage}"
+            Title="Programările mele"
+            ContentTemplate="{DataTemplate local:ProgramareEntryPage}"
          />  
     </TabBar>
 

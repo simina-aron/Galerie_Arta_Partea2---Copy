@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Galerie_Arta_Partea2"
              x:Class="Galerie_Arta_Partea2.ProgramarePage"
              Title="ProgramarePage">
     <StackLayout Margin="20">
         <Editor Placeholder="Adaugă tabloul pe care vrei să te programezi pentru a-l vizualiza"
-            Text="{Binding Descriere}"
-            HeightRequest="100" />        <Grid>
-            <Grid.ColumnDefinitions>                <ColumnDefinition Width="*" />                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>            <Button Text="Save"
+        Text="{Binding Descriere}"
+        HeightRequest="50" >
+            <Editor.Behaviors>
+                <local:ValidationBehaviour />
+            </Editor.Behaviors>
+        </Editor>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save"
                 Clicked="OnSaveButtonClicked" />
-            <Button Grid.Column="1"                Text="Delete"
-                Clicked="OnDeleteButtonClicked"/>        </Grid>
+            <Button Grid.Column="1"
+                Text="Delete"
+                Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+        
+        <ListView x:Name="listView"
+            Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Descriere}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button Text="Adaugă/Alege tablou pentru programare vizualizare" MaximumWidthRequest="300"
+                Clicked="OnChooseButtonClicked"/>
+    
+        <Button Text="Șterge tablou" MaximumWidthRequest="300"
+                Clicked="OnDeleteButtonClicked"/>
     </StackLayout>
 </ContentPage>

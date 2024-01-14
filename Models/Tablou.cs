@@ -25,5 +25,8 @@ namespace Galerie_Arta_Partea2.Models
         public int PictorID { get; set; }
 
         public string Poza { get; set; }
+
+        [OneToMany]
+        public List<Listă_tablouri> Listă_tablouri { get; set; }
     }
 }
